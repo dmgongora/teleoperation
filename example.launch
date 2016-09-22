@@ -1,0 +1,14 @@
+<launch>
+<machine name="beego" address="10.240.11.232" env-loader="/opt/ros/indigo/env.sh" user="pi" password="raspberry"/>
+<node
+    pkg="joy"
+    type="joy_node"
+    name="controller"
+/>
+<node
+    machine="beego"
+    name="orejitas"
+    pkg="teleoperation"
+    type="listener"
+/>
+</launch>
